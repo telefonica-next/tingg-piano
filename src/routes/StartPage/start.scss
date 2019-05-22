@@ -1,0 +1,23 @@
+@import "../../colors";
+
+.start-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: $eu-yellow;
+  .icon-star {
+    width: 130%;
+    position: relative;
+    top: -5%;
+  }
+  .title {
+    font-size: 1.5em;
+    background: $eu-blue;
+    margin-top: 60px;
+    position: fixed;
+    left: 74%;
+    top: 61%;
+  }
+}

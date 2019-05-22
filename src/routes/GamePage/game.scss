@@ -1,0 +1,117 @@
+@import "../../colors";
+
+.game-page {
+  color: $eu-yellow;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .funny-note-overlay {
+    background: rgba(255, 43, 46, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    transition: background 0.5s;
+  }
+
+  .funny-note-shake-animation {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: rotate(0);
+    //backface-visibility: hidden;
+    //perspective: 1000px;
+
+    @keyframes shake {
+      10%, 90% {
+        transform: rotate(-1deg);
+      }
+
+      20%, 80% {
+        transform: rotate(1deg);
+      }
+
+      30%, 50%, 70% {
+        transform: rotate(-1deg);
+      }
+
+      40%, 60% {
+        transform: rotate(1deg);
+      }
+    }
+  }
+
+  .score {
+    color: #fff;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .logo-eurostar {
+    width: 120px;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+  }
+
+  .notes-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 70px 0;
+    .note-line {
+      height: 1px;
+      background: #fff;
+      & + .note-line {
+        margin-top: 70px;
+      }
+    }
+    .icon-note {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      &.star-cooloops {
+        height: 140px;
+        width: 140px;
+        &.error {
+          opacity: 0.9;
+        }
+      }
+    }
+    .note-text {
+      position: absolute;
+      font-weight: bold;
+      font-size: 24px;
+      &.error {
+        color: $orange
+      }
+    }
+  }
+
+  .result-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+
+    .result-img {
+      width: 100%;
+    }
+    .result-text {
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .start-again-text {
+      margin-top: 20px;
+      font-size: 20px;
+      color: $eu-yellow;
+    }
+    .time {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+}
